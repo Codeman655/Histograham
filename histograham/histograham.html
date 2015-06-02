@@ -1,0 +1,21 @@
+<head>
+  <title>HistoGraham</title>
+</head>
+
+<body>
+  <h1>Welcome to Histograham!</h1>
+  {{> main}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="main">
+  <div class="main">
+    <div class="login"> 
+      {{> loginButtons align="center"}}
+    </div>
+  </div>
+</template>
