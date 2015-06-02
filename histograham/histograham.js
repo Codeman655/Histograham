@@ -12,7 +12,15 @@ if (Meteor.isClient) {
   });
 
   Template.chart.helpers({
-    generateChart: function() {
+    generateChart : function() {
+      var x = document.createElement('canvas');
+      x.id = 'histogram';
+      console.log("made the canvas")
+      return Handlebars.SafeString(x.innerHTML);
+    }
+  });
+
+  Template.chart.onRendered(function() {
       console.log("making a chart");
       var data = {
         labels:["Execute", "Collaborate", "Candid", "Forward"],
@@ -35,10 +43,8 @@ if (Meteor.isClient) {
         }
         ]
       };
-      //var ctx = $("#histogram").get(0).getContext("2d");
-      var ctx = document.getElementByID('histogram').getContext('2d');
-      var myBarChart = new Chart(ctx).Bar(data,options);
-    }
+      var ctx = $("#histogram").get(0).getContext('2d');
+      var myBarChart = new Chart(ctx).Bar(data);
   });
 
   Template.hello.events({
