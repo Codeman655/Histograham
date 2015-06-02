@@ -1,3 +1,6 @@
+//Helper functions
+
+
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
@@ -5,6 +8,13 @@ if (Meteor.isClient) {
   Template.hello.helpers({
     counter: function () {
       return Session.get('counter');
+    }
+  });
+
+  Template.chart.helpers({
+    generateChart: function() {
+      console.log("making a chart");
+      return null;
     }
   });
 

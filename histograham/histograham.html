@@ -1,21 +1,32 @@
 <head>
   <title>HistoGraham</title>
+  <!-- 
+  <link rel="stylesheet" href="animations.css">
+  -->
 </head>
 
 <body>
-  <h1>Welcome to Histograham!</h1>
-  {{> main}}
+<h1>Welcome to Histograham!</h1>
+{{> main}}
+{{> chart}}
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<button>Click Me</button>
+<p>You've pressed the button {{counter}} times.</p>
 </template>
 
 <template name="main">
-  <div class="main">
-    <div class="login"> 
-      {{> loginButtons align="center"}}
-    </div>
+<div class="main">
+  <div class="login"> 
+    {{> loginButtons}}
   </div>
+</div>
+</template>
+
+<template name="chart">
+<div class="chart">
+  <p>chart goes here</p>
+  {{> generateChart }}
+</div>
 </template>

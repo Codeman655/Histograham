@@ -9,3 +9,5 @@ autopublish
 insecure
 bootstrap
 mrt:chartjs
+accounts-ui
+accounts-password
