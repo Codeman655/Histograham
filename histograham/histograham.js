@@ -14,10 +14,6 @@ if (Meteor.isClient) {
   Template.chart.helpers({
     generateChart: function() {
       console.log("making a chart");
-      //var ctx = $("#histogram").get(0).getContext("2d");
-      var ctx = document.getElementByID('histogram').getContext('2d');
-
-
       var data = {
         labels:["Execute", "Collaborate", "Candid", "Forward"],
         datasets:[
@@ -38,9 +34,10 @@ if (Meteor.isClient) {
           data: [3,1,10,5]
         }
         ]
-      }
+      };
+      //var ctx = $("#histogram").get(0).getContext("2d");
+      var ctx = document.getElementByID('histogram').getContext('2d');
       var myBarChart = new Chart(ctx).Bar(data,options);
-      return mybarChart;
     }
   });
 
