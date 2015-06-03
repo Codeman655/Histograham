@@ -9,6 +9,7 @@
 <h1>Welcome to Histograham!</h1>
 {{> main}}
 {{> chart}}
+{{>buttons}}
 </body>
 
 <template name="hello">
@@ -30,3 +31,14 @@
   <canvas id="histogram"></canvas>
 </div>
 </template>
+
+<template name="buttons">
+<div>
+  <table>
+    <tr>
+      {{#each words}
+        <td>{{words}}</td>
+      {{/each}}
+    </tr>
+  </table>
+</div>

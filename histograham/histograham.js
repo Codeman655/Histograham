@@ -1,5 +1,7 @@
 //Helper functions
-
+//
+CalledWords = new Meteor.Collection("CalledWords");
+Words=["Execute", "Collaborate", "Candid", "Forward"];
 
 if (Meteor.isClient) {
   // counter starts at 0
@@ -10,6 +12,9 @@ if (Meteor.isClient) {
       return Session.get('counter');
     }
   });
+
+  Template.buttons.helpers({
+    words:{
 
   Template.chart.helpers({
     generateChart : function() {
@@ -23,7 +28,7 @@ if (Meteor.isClient) {
   Template.chart.onRendered(function() {
       console.log("making a chart");
       var data = {
-        labels:["Execute", "Collaborate", "Candid", "Forward"],
+        labels:Words,
         datasets:[
         {
           label: "dataset_one",
