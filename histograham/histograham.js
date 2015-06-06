@@ -3,6 +3,19 @@
 CalledWords = new Meteor.Collection("CalledWords");
 Words=["Execute", "Collaborate", "Candid", "Forward"];
 
+Router.route('/', function () {
+  this.render('main');
+});
+Router.route('/howtoplay', function () {
+  this.render('howtoplay');
+});
+Router.route('/halloffame', function () {
+  this.render('halloffame');
+});
+Router.route('/hallofshame', function () {
+  this.render('hallofshame');
+});
+
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
@@ -14,7 +27,13 @@ if (Meteor.isClient) {
   });
 
   Template.buttons.helpers({
-    words:{
+    list: [ 
+      {word:"Execute", count:0},
+      {word:"Collaborate", count:0},
+      {word:"Candid", count:0},
+      {word:"Forward", count:0}
+  ]
+  });
 
   Template.chart.helpers({
     generateChart : function() {

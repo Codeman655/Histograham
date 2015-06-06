@@ -6,10 +6,9 @@
 </head>
 
 <body>
-<h1>Welcome to Histograham!</h1>
-{{> main}}
-{{> chart}}
-{{>buttons}}
+{{> nav}}
+{{> main }}
+{{> chart }}
 </body>
 
 <template name="hello">
@@ -19,6 +18,7 @@
 
 <template name="main">
 <div class="main">
+  <h1>Welcome to Histograham!</h1>
   <div class="login"> 
     {{> loginButtons}}
   </div>
@@ -36,9 +36,61 @@
 <div>
   <table>
     <tr>
-      {{#each words}
-        <td>{{words}}</td>
+      {{#each list}}
+      <td>{{words}}</td>
       {{/each}}
     </tr>
   </table>
 </div>
+</template>
+
+<template name="howtoplay">
+  <h1>How to Play</h1>
+</template>
+
+<template name="halloffame">
+  <h1>Hall of Fame</h1>
+</template>
+<template name="hallofshame">
+  <h1>Hall of Shame</h1>
+</template>
+
+<template name="nav">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Histogram</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/howtoplay">How to Play</a></li>
+        <li><a href="/halloffame">Hall of Fame</a></li> 
+        <li><a href="/hallofshame">Hall of Shame</a></li> 
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</template>
+
+<template name="nav2">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li> 
+        <li><a href="#">Page 3</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+</template>

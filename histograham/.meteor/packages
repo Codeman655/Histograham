@@ -12,3 +12,4 @@ mrt:chartjs
 accounts-ui
 accounts-password
 jquery
+iron:router
