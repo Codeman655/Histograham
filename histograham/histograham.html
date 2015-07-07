@@ -3,12 +3,11 @@
   <!-- 
   <link rel="stylesheet" href="animations.css">
   -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 
 <body>
 {{> nav}}
-{{> main }}
-{{> chart }}
 </body>
 
 <template name="hello">
@@ -25,8 +24,18 @@
 </div>
 </template>
 
+<template name="home">
+  <div>
+    <h1>
+      <div class="welcome">
+        <p>Welcome</p>
+      </div>
+    </h1>
+  </div>
+</template>
+
 <template name="chart">
-<div class="chart">
+<div class="">
   <p>chart goes here</p>
   <canvas id="histogram"></canvas>
 </div>
@@ -47,7 +56,6 @@
 <template name="howtoplay">
   <h1>How to Play</h1>
 </template>
-
 <template name="halloffame">
   <h1>Hall of Fame</h1>
 </template>
@@ -59,9 +67,6 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Histogram</a>
-    </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div>
       <ul class="nav navbar-nav">
@@ -74,23 +79,5 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-</nav>
-</template>
-
-<template name="nav2">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li> 
-        <li><a href="#">Page 3</a></li> 
-      </ul>
-    </div>
-  </div>
 </nav>
 </template>

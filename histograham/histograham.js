@@ -4,7 +4,7 @@ CalledWords = new Meteor.Collection("CalledWords");
 Words=["Execute", "Collaborate", "Candid", "Forward"];
 
 Router.route('/', function () {
-  this.render('main');
+  this.render('home');
 });
 Router.route('/howtoplay', function () {
   this.render('howtoplay');
